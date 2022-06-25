@@ -14,7 +14,10 @@
 	<name>spring-boot-actuator-demo</name>
 	<description>Demo project for LinkedInLearning</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>18</java.version>
+		<maven.build.timestamp.format>
+			dd-MM-yyyy HH:mm:ss
+		</maven.build.timestamp.format>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -25,7 +28,21 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<!-- Adding Actuator Dependency -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- Adding Security Dependency -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<!-- Adding Micrometer Prometheus to expose metrics from App -->
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
